@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "watch": "gulp",
-    "build": ""
+    "build": "gulp build"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.14.0",
