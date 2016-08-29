@@ -1,0 +1,17 @@
+# os ignoire files
+*.DS_Store
+
+# editor files
+*~
+*.iml
+.idea
+*.sublime-workspace
+*.sublime-project
+
+# npm files
+.sass-cache
+node_modules
+
+
+# builded directories
+dist

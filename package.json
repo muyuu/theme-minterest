@@ -1,0 +1,38 @@
+{
+  "name": "theme-minterest",
+  "version": "1.0.0",
+  "description": "minterest WP theme",
+  "main": "",
+  "repository": "https://github.com/muyuu/theme-minterest",
+  "author": "muyuu",
+  "license": "MIT",
+  "scripts": {
+    "watch": "gulp",
+    "build": ""
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.14.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.0",
+    "font-awesome": "^4.6.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-changed": "^1.3.2",
+    "gulp-connect": "^4.2.0",
+    "gulp-csscomb": "^3.0.7",
+    "gulp-jade": "^1.1.0",
+    "gulp-open": "^2.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.0.4",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.9",
+    "jquery": "^3.1.0",
+    "lodash": "^4.15.0",
+    "smoove": "^1.1.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
+  }
+}
