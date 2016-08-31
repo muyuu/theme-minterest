@@ -7,7 +7,7 @@
   "author": "muyuu",
   "license": "MIT",
   "scripts": {
-    "watch": "gulp",
+    "dev": "gulp",
     "build": "gulp build"
   },
   "devDependencies": {
