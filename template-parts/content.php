@@ -26,6 +26,12 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 
+	<?php if ( is_single() ) : ?>
+		<div class="entry-add">
+			inset google ad
+		</div>
+	<?php endif; ?>
+
 	<div class="entry-content">
 		<?php
 			the_content( sprintf(
