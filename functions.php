@@ -102,11 +102,6 @@ add_action( 'widgets_init', 'minterest_widgets_init' );
  * Enqueue scripts and styles.
  */
 function minterest_scripts() {
-    wp_enque_style(
-        'minterest',
-        'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'
-    );
-
 	wp_enqueue_style( 'minterest-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'minterest-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
