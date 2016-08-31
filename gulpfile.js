@@ -47,7 +47,7 @@ const d = {
 
 // build css
 gulp.task("css", ()=>{
-    gulp.src(`${s.css}style.sass`)
+    gulp.src(`${s.css}style.scss`)
         .pipe(plumber())
         .pipe(sass({
             outputStyle: 'compressed'
