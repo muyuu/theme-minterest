@@ -25,8 +25,8 @@ function minterest_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'minterest' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		esc_html_x( '%s', 'post date', 'minterest' ),
+		'<span>' . $time_string . '</span><i class="fa fa-clock-o"></i>'
 	);
 
 	$byline = sprintf(
@@ -34,7 +34,10 @@ function minterest_posted_on() {
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+	//$bylineTag = '<span class="byline"> ' . $byline . '</span>';
+	$bylineTag = '';
+
+	echo '<span class="posted-on">' . $posted_on . '</span>'. $bylineTag; // WPCS: XSS OK.
 
 }
 endif;
@@ -49,13 +52,13 @@ function minterest_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'minterest' ) );
 		if ( $categories_list && minterest_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'minterest' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			printf( '<span class="cat-links"> <i class="fa fa-folder-open-o"></i>' . esc_html__( ' %1$s', 'minterest' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'minterest' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'minterest' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="tags-links"> <i class="fa fa-tags"></i>' . esc_html__( ' %1$s', 'minterest' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
@@ -66,15 +69,10 @@ function minterest_entry_footer() {
 		echo '</span>';
 	}
 
-	edit_post_link(
-		sprintf(
-			/* translators: %s: Name of current post */
-			esc_html__( 'Edit %s', 'minterest' ),
-			the_title( '<span class="screen-reader-text">"', '"</span>', false )
-		),
-		'<span class="edit-link">',
-		'</span>'
-	);
+	if ( ! is_admin() ) {
+		edit_post_link( sprintf( /* translators: %s: Name of current post */
+			esc_html__( 'Edit %s', 'minterest' ), the_title( '<span class="screen-reader-text">"', '"</span>', false ) ), '<span class="edit-link">', '</span>' );
+	}
 }
 endif;
 
