@@ -13,9 +13,10 @@
 
 // Clearfix
 @mixin clearfix() {
-	content: "";
-	display: table;
-	table-layout: fixed;
+	content: "\0020";
+	display: block;
+	overflow: hidden;
+	height: 0;
 }
 
 // Clear after (not all clearfix need this also)

@@ -1,8 +1,50 @@
 .widget {
+	$this: &;
+
 	margin: 0 0 1.5em;
 
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;
+	}
+
+	&--title {
+		@include rem(18px)
+	}
+
+	ul {
+		padding: 0;
+		margin: 0;
+
+		li {
+			padding: 10px;
+			margin: 0;
+
+			$this-bg-color: #fff;
+			$this-bg-hover-color: #ddd;
+			$this-border-color: #999;
+			$this-border: 1px solid $this-border-color;
+
+			>a,>a:visited, >span {
+				display: block;
+				margin: -10px;
+				padding: 10px;
+				border-bottom: $this-border;
+				text-decoration: none;
+				background: $this-bg-color;
+				color: $color__link;
+				@include transition(all .3s);
+
+				&:hover {
+					background: lighten($color__link, 40%);
+					@include transition(all .3s);
+				}
+			}
+			&:first-child {
+				>a,>a:hover,>span {
+					border-top: $this-border;
+				}
+			}
+		}
 	}
 }

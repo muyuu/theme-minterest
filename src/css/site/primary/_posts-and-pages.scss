@@ -7,7 +7,7 @@
 }
 
 .byline,
-.updated:not(.published){
+.updated:not(.published) {
 	display: none;
 }
 
@@ -25,4 +25,42 @@
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.post {
+	@include tablet(){
+		padding-left: 1em;
+	}
+	@include smartphone(){
+		padding-right: 1em;
+	}
+	ul {
+		margin-bottom: 1.5rem;
+		> li {
+			position: relative;
+			padding-left: 1.2rem;
+
+			&:before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				content: "・";
+			}
+		}
+	}
+	li {
+		margin-bottom: 1rem;
+	}
+
+	blockquote {
+		margin: 1.5em 0;
+		padding: 2em;
+		background: #eee;
+
+		p:last-child,
+		ul:last-child,
+		li:last-child{
+			margin-bottom: 0;
+		}
+	}
 }

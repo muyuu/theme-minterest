@@ -1,8 +1,14 @@
 .main-navigation {
+
+	$this-border-color: #999;
+	$this-border: 1px solid $this-border-color;
 	clear: both;
 	display: block;
 	float: left;
 	width: 100%;
+	padding: 10px;
+	border-top: $this-border;
+	border-bottom: $this-border;
 
 	ul {
 		display: none;
@@ -60,6 +66,8 @@
 
 	a {
 		display: block;
+		margin: -10px;
+		padding: 10px;
 		text-decoration: none;
 	}
 
