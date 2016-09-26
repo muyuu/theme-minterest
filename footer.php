@@ -20,7 +20,7 @@
 			<div class="site-info">
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'minterest' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'minterest' ), 'WordPress' ); ?></a>
 				<span class="sep"> | </span>
-				<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'minterest' ), 'minterest', '<a href="http://minterest.site/" rel="designer">muyuu</a>' ); ?>
+				<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'minterest' ), 'minterest', '<a href="http://minterest.site/" rel="designer">minterest</a>' ); ?>
 			</div><!-- .site-info -->
 		</div><!-- .container -->
 	</footer><!-- #colophon -->
