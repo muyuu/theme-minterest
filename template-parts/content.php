@@ -28,7 +28,7 @@
 
 	<?php if ( is_single() ) : ?>
 		<div class="entry-add">
-			inset google ad
+			<ins id="ad-single-<?php the_ID(); ?>" style="display: none;" class="adsbygoogle-placeholder"></ins>
 		</div>
 	<?php endif; ?>
 
